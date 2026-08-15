@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Recipes | Cook It Up</title>
+
+    <!-- IMPORTANT:
+         style.css is inside the css folder -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            🍳 Cook It Up
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="recipes.html"
+                class="active"
+            >
+                Recipes
+            </a>
+
+        </nav>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <section class="page-header">
+
+        <p>
+            COOK IT UP
+        </p>
+
+        <h1>
+            Explore Recipes 🍽️
+        </h1>
+
+        <p>
+            Discover authentic and delicious recipes
+            from Telangana and Andhra Pradesh.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SEARCH
+    ====================================================== -->
+
+    <section class="recipe-search-section">
+
+        <div class="recipe-search-box">
+
+            <input
+                type="text"
+                id="recipeSearch"
+                placeholder="Search for a recipe..."
+                autocomplete="off"
+            >
+
+            <span class="search-icon">
+                🔍
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FILTERS
+    ====================================================== -->
+
+    <section class="filter-section">
+
+        <div class="filters">
+
+
+            <!-- ALL -->
+
+            <button
+                type="button"
+                class="filter-button active-filter"
+                onclick="filterRecipes('All', this)"
+            >
+                All
+            </button>
+
+
+            <!-- =================================================
+                 STATES
+            ================================================== -->
+
+            <button
+                type="button"
+                class="filter-button"
+                onclick="filterRecipes('Telangana', this)"
+            >
+                Telangana
+            </button>
+
+
+            <button
+                type="button"
+                class="filter-button"
+                onclick="filterRecipes('Andhra Pradesh', this)"
+            >
+                Andhra Pradesh
+            </button>
+
+
+            <!-- =================================================
+                 FOOD TYPE
+            ================================================== -->
+
+            <button
+                type="button"
+                class="filter-button"
+                onclick="filterRecipes('Vegetarian', this)"
+            >
+                🌱 Vegetarian
+            </button>
+
+
+            <button
+                type="button"
+                class="filter-button"
+                onclick="filterRecipes('Non-Vegetarian', this)"
+            >
+                🍗 Non-Vegetarian
+            </button>
+
+
+            <!-- =================================================
+                 CATEGORIES
+            ================================================== -->
+
+            <!-- =================================================
+     CATEGORIES
+================================================== -->
+
+<div id="categoryFilters" class="category-filters">
+
+    <!-- JavaScript will automatically create
+         category buttons from recipes.json -->
+
+</div>
+
+
+    <!-- =====================================================
+         RECIPES
+    ====================================================== -->
+
+    <main class="recipes-container">
+
+        <div
+            id="recipeGrid"
+            class="recipe-grid"
+        >
+
+            <!-- JavaScript loads recipes here -->
+
+            <div class="loading">
+
+                <h2>
+                    Loading recipes... 🍳
+                </h2>
+
+                <p>
+                    Please wait.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🍳 Cook It Up
+        </div>
+
+
+        <p>
+            Discover the authentic flavours of
+            Telangana & Andhra Pradesh.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Cook It Up.
+            College Project.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <!-- script.js is in the main project folder -->
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

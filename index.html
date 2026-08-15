@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cook It Up | Telangana & Andhra Recipes</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🍳 <span>Cook It Up</span>
+        </div>
+
+
+        <nav>
+
+            <a
+                href="index.html"
+                class="active"
+            >
+                Home
+            </a>
+
+            <a href="recipes.html">
+                Recipes
+            </a>
+
+            <a href="#telangana">
+                Telangana
+            </a>
+
+            <a href="#andhra">
+                Andhra Pradesh
+            </a>
+
+        </nav>
+
+
+        <button
+            class="mobile-menu"
+            onclick="toggleMenu()"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                AUTHENTIC FLAVOURS OF SOUTH INDIA
+            </p>
+
+
+            <h1>
+
+                Discover the Taste of
+
+                <span>
+                    Telangana & Andhra Pradesh
+                </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Explore traditional recipes, delicious dishes,
+                and the rich culinary heritage of Telangana and
+                Andhra Pradesh.
+
+            </p>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for a recipe..."
+                    autocomplete="off"
+                    onkeydown="handleHomeSearch(event)"
+                >
+
+
+                <button
+                    type="button"
+                    onclick="searchRecipes()"
+                >
+                    🔍 Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CATEGORIES
+    ====================================================== -->
+
+    <section class="categories">
+
+        <div class="section-heading">
+
+            <p>
+                EXPLORE
+            </p>
+
+            <h2>
+                What are you craving?
+            </h2>
+
+        </div>
+
+
+        <div class="category-container">
+
+
+            <!-- =================================================
+                 1. RICE DISHES
+            ================================================== -->
+
+            <a
+                href="recipes.html?search=Rice%20Dishes"
+                class="category-card"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="images/rice-dishes.jpg"
+                        alt="Rice Dishes"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Rice Dishes
+                </h3>
+
+
+                <p>
+                    Biryani, Pulihora & more
+                </p>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 2. CURRIES
+            ================================================== -->
+
+            <a
+                href="recipes.html?search=Curries"
+                class="category-card"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="images/curries.jpg"
+                        alt="Curries"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Curries
+                </h3>
+
+
+                <p>
+                    Traditional spicy curries
+                </p>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 3. CHUTNEYS
+            ================================================== -->
+
+            <a
+                href="recipes.html?search=Chutneys"
+                class="category-card"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="images/chutneys.jpg"
+                        alt="Chutneys"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Chutneys
+                </h3>
+
+
+                <p>
+                    Authentic Pachadis
+                </p>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 4. BREAKFAST
+            ================================================== -->
+
+            <a
+                href="recipes.html?search=Breakfast"
+                class="category-card"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="images/breakfast.jpg"
+                        alt="Breakfast"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Breakfast
+                </h3>
+
+
+                <p>
+                    Traditional breakfast favourites
+                </p>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 5. SNACKS
+            ================================================== -->
+
+            <a
+                href="recipes.html?search=Snacks"
+                class="category-card"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="images/snacks.jpg"
+                        alt="Snacks"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Snacks
+                </h3>
+
+
+                <p>
+                    Crispy & delicious snacks
+                </p>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 6. SWEETS
+            ================================================== -->
+
+            <a
+                href="recipes.html?search=Sweets"
+                class="category-card"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="images/sweets.jpg"
+                        alt="Sweets"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Sweets
+                </h3>
+
+
+                <p>
+                    Traditional Indian sweets
+                </p>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 7. NON-VEG
+            ================================================== -->
+
+            <a
+                href="recipes.html?search=Non-Vegetarian"
+                class="category-card"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="images/non-veg.jpg"
+                        alt="Non-Vegetarian Food"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Non-Veg
+                </h3>
+
+
+                <p>
+                    Chicken, fish & meat
+                </p>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 8. BREAD
+            ================================================== -->
+
+            <a
+                href="recipes.html?search=Bread"
+                class="category-card"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="images/bread.jpg"
+                        alt="Indian Bread"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Bread
+                </h3>
+
+
+                <p>
+                    Rotis, breads & more
+                </p>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 9. PICKLES
+            ================================================== -->
+
+            <a
+                href="recipes.html?search=Pickles"
+                class="category-card"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="images/pickles.jpg"
+                        alt="Pickles"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Pickles
+                </h3>
+
+
+                <p>
+                    Spicy & authentic pickles
+                </p>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TELANGANA
+    ====================================================== -->
+
+    <section
+        class="region-section"
+        id="telangana"
+    >
+
+        <div class="region-content">
+
+
+            <div>
+
+                <p class="region-label">
+                    FLAVOURS OF TELANGANA
+                </p>
+
+
+                <h2>
+                    Telangana Cuisine
+                </h2>
+
+
+                <p>
+
+                    Discover the bold and authentic flavours of
+                    Telangana. From traditional village dishes
+                    to the famous flavours of Hyderabad, explore
+                    recipes passed down through generations.
+
+                </p>
+
+
+                <a
+                    href="recipes.html?search=Telangana"
+                    class="explore-button"
+                >
+                    Explore Telangana →
+                </a>
+
+            </div>
+
+
+            <div class="region-symbol">
+                🌶️
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ANDHRA PRADESH
+    ====================================================== -->
+
+    <section
+        class="region-section andhra"
+        id="andhra"
+    >
+
+        <div class="region-content">
+
+
+            <div class="region-symbol">
+                🍛
+            </div>
+
+
+            <div>
+
+                <p class="region-label">
+                    FLAVOURS OF ANDHRA PRADESH
+                </p>
+
+
+                <h2>
+                    Andhra Cuisine
+                </h2>
+
+
+                <p>
+
+                    Experience the famous spicy and flavorful
+                    cuisine of Andhra Pradesh, including
+                    traditional rice dishes, pickles, curries,
+                    seafood and sweets.
+
+                </p>
+
+
+                <a
+                    href="recipes.html?search=Andhra%20Pradesh"
+                    class="explore-button"
+                >
+                    Explore Andhra →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         POPULAR RECIPES
+    ====================================================== -->
+
+    <section class="popular">
+
+        <div class="section-heading">
+
+            <p>
+                DON'T KNOW WHAT TO COOK?
+            </p>
+
+            <h2>
+                Popular Recipes
+            </h2>
+
+        </div>
+
+
+        <div
+            id="popularRecipes"
+            class="recipe-container"
+        >
+
+            <div class="recipe-loading">
+
+                🍳 Loading recipes...
+
+            </div>
+
+        </div>
+
+
+        <!-- VIEW ALL RECIPES -->
+
+        <div class="popular-button">
+
+            <a
+                href="recipes.html"
+                class="explore-button"
+            >
+                Explore All Recipes →
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🍳 Cook It Up
+        </div>
+
+
+        <p>
+
+            Discover the authentic flavours of
+            Telangana & Andhra Pradesh.
+
+        </p>
+
+
+        <p class="copyright">
+
+            © 2026 Cook It Up.
+            College Project.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
